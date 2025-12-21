@@ -16,17 +16,9 @@ update_system() {
     sleep 3
 }
 
-# 配置Wine
-install_wine_config() {
-    echo "配置Wine..."
-
-    echo "Wine配置完成，可手动运行：winecfg"
-}
-
 # 执行其他函数
 INSTALL_FUNCTIONS=(
     update_system
-    install_wine_config
 )
 
 for func in "${INSTALL_FUNCTIONS[@]}"; do

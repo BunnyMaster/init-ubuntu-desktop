@@ -8,8 +8,8 @@ echo "#######################################################################"
 echo ""
 
 # 定义变量
-GIT_USERNAME="bunny"
-GIT_EMAIL="131990014@qq.com"
+GIT_USERNAME="your_username"
+GIT_EMAIL="your_email"
 
 # 安装Git
 install_git() {
