@@ -41,6 +41,7 @@ install_java() {
     # 尝试安装指定版本
     sudo apt install openjdk-21-jdk -y 2>/dev/null || echo "Java 21 不可用"
     sudo apt install openjdk-17-jdk -y 2>/dev/null || echo "Java 17 不可用"
+    sudo apt install openjdk-8-jdk -y 2>/dev/null || echo "Java 8 不可用"
 
     echo "已安装的Java版本："
     java --version 2>/dev/null || echo "Java未安装成功"
@@ -69,36 +70,38 @@ install_nodejs() {
     # 安装Node.js和npm
     sudo apt install nodejs -y
 
-    # 更新npm到最新版本
-    sudo npm install -g npm
-
-    # 查看当前镜像
-    echo "当前npm镜像："
-    npm config get registry
-
-    # 设置为阿里镜像
-    npm config set registry https://registry.npmmirror.com
-
-    # 安装pnpm
-    sudo npm install -g pnpm
-    pnpm config set registry https://registry.npmmirror.com
-
-    # 安装yarn
-    sudo npm install -g yarn
-    yarn config set registry https://registry.npmmirror.com
-
     echo "Node.js版本："
     node --version
-    echo "npm版本："
-    npm --version
+
+    # # 查看当前镜像
+    # echo "当前npm镜像："
+    # npm config get registry
+
+    # # 设置为阿里镜像
+    # npm config set registry https://registry.npmmirror.com
+    # echo "npm版本："
+    # npm --version
+
+    # # 安装pnpm
+    # sudo npm install -g pnpm
+    # pnpm config set registry https://registry.npmmirror.com
+    # echo "pnpm版本："
+    # pnpm --version
+
+    # # 安装yarn
+    # sudo npm install -g yarn
+    # yarn config set registry https://registry.npmmirror.com
+    # echo "yarn版本："
+    # pnpm --version
 }
 
 # 安装NVM
 install_nvm() {
     echo "安装NVM..."
 
-    # 从GitHub安装nvm
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    # # 从GitHub安装nvm
+    # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    bash install ./nvm.sh
 
     # 加载nvm到当前shell
     export NVM_DIR="$HOME/.nvm"

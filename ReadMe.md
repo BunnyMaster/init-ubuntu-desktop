@@ -12,6 +12,10 @@
 
 ## 目录结构
 
+> [!WARNING]
+>
+> `ubuntu.sources`需要为自己的Ubuntu版本，如果版本不对下载是有问题的！
+
 ```
 config/
 ├── settings.xml    # Maven配置文件
