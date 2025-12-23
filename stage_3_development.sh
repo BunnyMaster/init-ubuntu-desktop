@@ -83,13 +83,13 @@ install_nodejs() {
     # npm --version
 
     # # 安装pnpm
-    # sudo npm install -g pnpm
+    # npm install -g pnpm
     # pnpm config set registry https://registry.npmmirror.com
     # echo "pnpm版本："
     # pnpm --version
 
     # # 安装yarn
-    # sudo npm install -g yarn
+    # npm install -g yarn
     # yarn config set registry https://registry.npmmirror.com
     # echo "yarn版本："
     # pnpm --version
@@ -100,7 +100,7 @@ install_nvm() {
     echo "安装NVM..."
 
     # # 从GitHub安装nvm
-    # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
     bash install ./nvm.sh
 
     # 加载nvm到当前shell
